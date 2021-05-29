@@ -3,12 +3,12 @@
 
 <% @restaurant.reviews.each do |review| %>
   <h4> <%= review.content %> </h4>
-  <p> Rating of: <%= review.rating %> </p>
-  <%= button_to "Delete Review", review, :method => "delete" %>
-<% end %>
+  <p> Rating of: <%= review.rating %> <%= button_to "Delete Review", review, :method => "delete" %>
+<% end %> </p>
+
 
 <%= link_to "Add Review", new_restaurant_review_path(@restaurant) %>
 <%= link_to "Back To Restaurants", restaurants_path(@restaurants) %>
-<%= link_to "Delete Restaurant", restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure?"} %>
+
 
 

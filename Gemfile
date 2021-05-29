@@ -53,3 +53,4 @@ gem 'simple_form'
 gem 'faker'
 
 gem 'jquery-rails'
+gem 'bootstrap'

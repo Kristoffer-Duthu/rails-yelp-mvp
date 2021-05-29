@@ -1,8 +1,8 @@
-<h1> YELP! I NEED SOMEBODY YELP!!! NOT JUST ANYBODY </h1>
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-  <% end %>
-</ul>
+<h1> YELP! </h1>
+<h3> Review and Add Your Restaurants! </h3>
 
-<%= link_to "Add Restaurant", new_restaurant_path(@restaurant) %>
+  <% @restaurants.each do |restaurant| %>
+  <h4 class="card-white"> <%= link_to restaurant.name, restaurant_path(restaurant) %> <%= button_to "Delete", restaurant_path(restaurant), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-danger' %> </h4>
+  <% end %>
+
+<%= link_to "Add Restaurant", new_restaurant_path(@restaurant), class: 'btn btn-primary' %>
