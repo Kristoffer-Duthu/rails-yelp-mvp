@@ -12,6 +12,9 @@
 @import "components/index";
 @import "pages/index";
 
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@1,500&display=swap');
+
 .card-white{
   display: flex;
   justify-content: space-between;
@@ -22,25 +25,70 @@
   margin: 16px;
 }
 
+.card-white a {
+  color: #1F2735;
+  text-decoration: none;
+  // font-family: 'Bebas Neue', cursive;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.card-white a:hover{
+  color: gray;
+}
+
 h1{
   text-align: center;
+  font-family: 'Exo 2', sans-serif;
+}
+h2 {
+  font-family: 'Exo 2', sans-serif;
 }
 
 h3{
   text-align: center;
+  font-family: 'Exo 2', sans-serif;
 }
 
+h4 {
+  font-family: 'Exo 2', sans-serif;
+}
 
 body {
+  background-color: #DDCFA2;
   display:border-box;
   width: 1500;
   margin: 32px;
 }
 
 .card-show {
-  background-color: #FBF7F5;
+  width: 800px;
+  margin: 0 auto;
   padding: 16px;
+  background-color: #FBF7F5;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+.index-container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.btn-container {
+ margin: 16px;
+}
+
+.header-show {
+  text-align: center;
   margin: 16px;
+}
+
+.restaurant-details {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.buttons-show-page {
+text-align: center;
+margin-top: 8px;
 }

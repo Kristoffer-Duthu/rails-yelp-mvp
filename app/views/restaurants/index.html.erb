@@ -1,8 +1,14 @@
 <h1> YELP! </h1>
-<h3> Review and Add Your Restaurants! </h3>
+<div class="index-container">
+  <h3> Review and Add Your Restaurants </h3>
 
   <% @restaurants.each do |restaurant| %>
-  <h4 class="card-white"> <%= link_to restaurant.name, restaurant_path(restaurant) %> <%= button_to "Delete", restaurant_path(restaurant), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-danger' %> </h4>
+  <h4 class="card-white"> <%= link_to restaurant.name, restaurant_path(restaurant) %> <%= button_to "Delete", restaurant_path(restaurant), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-outline-danger' %> </h4>
   <% end %>
+  <div class="btn-container">
+    <%= link_to "Add Restaurant", new_restaurant_path(@restaurant), class: 'btn btn-outline-primary' %>
+  </div>
+</div>
 
-<%= link_to "Add Restaurant", new_restaurant_path(@restaurant), class: 'btn btn-primary' %>
+
+

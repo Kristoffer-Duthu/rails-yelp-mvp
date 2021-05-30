@@ -1,18 +1,19 @@
+ <div class="header-show">
+   <h2><%= @restaurant.name %></h2>
+ </div>
+<div class="restaurant-details">
+   <p> <%= @restaurant.address %> || <%= @restaurant.phone_number %> </p>
+   <%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: 'btn btn-outline-secondary' %>
+</div>
 <div class="card-show">
-  <h2><%= @restaurant.name %></h2>
-  <p> <%= @restaurant.address %> || <%= @restaurant.phone_number %> </p>
-
   <% @restaurant.reviews.each do |review| %>
-  <h4> <%= review.content %> </h4>
-  <p> Rating of: <%= review.rating %> <%= button_to "Delete Review", review, :method => "delete", class: 'btn btn-danger' %>
+ <h4 class="card-white"> <%= review.content %> </h4>
+ <p> Rating of: <%= review.rating %> <%= button_to "Delete Review", review, :method => "delete", class: 'btn btn-outline-danger' %>
   <% end %> </p>
 
-
-  <%= link_to "Add Review", new_restaurant_review_path(@restaurant) %>
-  <%= link_to "Back To Restaurants", restaurants_path(@restaurants) %>
-
-
 </div>
-
+<div class="buttons-show-page">
+    <%= link_to "Back To Restaurants", restaurants_path(@restaurants), class: 'btn btn-outline-primary' %>
+</div>
 
 
