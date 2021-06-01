@@ -8,7 +8,7 @@
 <div class="card-show">
   <% @restaurant.reviews.each do |review| %>
  <h4 class="card-white"> <%= review.content %> </h4>
- <p> Rating of: <%= review.rating %> <%= button_to "Delete Review", review, :method => "delete", class: 'btn btn-outline-danger' %>
+ <p> Rating of: <%= review.rating %> <%= link_to "Delete Review", review, method: :delete, class: 'btn btn-outline-danger' %>
   <% end %> </p>
 
 </div>
