@@ -93,3 +93,17 @@ body {
   text-align: center;
   margin-top: 8px;
 }
+
+.fa-trash {
+  color: black;
+}
+
+.fa-trash:hover {
+  color: red;
+}
+
+#delete-icon {
+  position: relative;
+  right: 4px;
+  top: 8px;
+}

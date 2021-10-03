@@ -3,17 +3,20 @@
  </div>
 <div class="restaurant-details">
    <p> <%= @restaurant.address %> || <%= @restaurant.phone_number %> </p>
+   <%= link_to "Back To Restaurants", restaurants_path(@restaurants), class: 'btn btn-outline-primary' %>
    <%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: 'btn btn-outline-secondary' %>
+</div>
+<div class="buttons-show-page">
 </div>
 <div class="card-show">
   <% @restaurant.reviews.each do |review| %>
- <h4 class="card-white"> <%= review.content %> </h4>
- <p> Rating of: <%= review.rating %> <%= link_to "Delete Review", review, method: :delete, class: 'btn btn-outline-danger' %>
-  <% end %> </p>
+    <h4 class="card-white"> <%= review.content %> </h4>
+    <p style="text-align: center;"> Rating: <%= review.rating %> stars </p>
+    <div id="delete-icon">
+      <%= link_to "", review, method: :delete, class: 'fas fa-trash' %>
+    </div>
+  <% end %>
+</div>
 
-</div>
-<div class="buttons-show-page">
-    <%= link_to "Back To Restaurants", restaurants_path(@restaurants), class: 'btn btn-outline-primary' %>
-</div>
 
 
