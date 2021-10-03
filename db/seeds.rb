@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 10.times do
   res = Restaurant.create!(
-    name: Faker::JapaneseMedia::SwordArtOnline.real_name,
+    name: Faker::Company.name,
     address: Faker::Address.street_address,
     phone_number: Faker::PhoneNumber.phone_number,
     category: ["chinese", "italian", "japanese", "french", "belgian"].sample
