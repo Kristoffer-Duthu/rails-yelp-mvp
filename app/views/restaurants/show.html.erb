@@ -3,7 +3,10 @@
  </div>
 <div class="restaurant-details">
    <p> <%= @restaurant.address %> || <%= @restaurant.phone_number %> </p>
+   <%= link_to "Back To Restaurants", restaurants_path(@restaurants), class: 'btn btn-outline-primary' %>
    <%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: 'btn btn-outline-secondary' %>
+</div>
+<div class="buttons-show-page">
 </div>
 <div class="card-show">
   <% @restaurant.reviews.each do |review| %>
@@ -12,8 +15,6 @@
   <% end %> </p>
 
 </div>
-<div class="buttons-show-page">
-    <%= link_to "Back To Restaurants", restaurants_path(@restaurants), class: 'btn btn-outline-primary' %>
-</div>
+
 
 
