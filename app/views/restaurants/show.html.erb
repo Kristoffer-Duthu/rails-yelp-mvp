@@ -10,10 +10,12 @@
 </div>
 <div class="card-show">
   <% @restaurant.reviews.each do |review| %>
- <h4 class="card-white"> <%= review.content %> </h4>
- <p> Rating of: <%= review.rating %> <%= link_to "Delete Review", review, method: :delete, class: 'btn btn-outline-danger' %>
-  <% end %> </p>
-
+    <h4 class="card-white"> <%= review.content %> </h4>
+    <p style="text-align: center;"> Rating: <%= review.rating %> stars </p>
+    <div style="position: absolute; right: 138px; top: 289px;">
+      <%= link_to "", review, method: :delete, class: 'fas fa-trash' %>
+    </div>
+  <% end %>
 </div>
 
 
