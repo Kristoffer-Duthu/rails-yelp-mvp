@@ -12,7 +12,7 @@
   <% @restaurant.reviews.each do |review| %>
     <h4 class="card-white"> <%= review.content %> </h4>
     <p style="text-align: center;"> Rating: <%= review.rating %> stars </p>
-    <div style="position: absolute; right: 138px; top: 289px;">
+    <div id="delete-icon">
       <%= link_to "", review, method: :delete, class: 'fas fa-trash' %>
     </div>
   <% end %>
