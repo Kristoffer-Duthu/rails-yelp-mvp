@@ -31,6 +31,8 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   margin: 16px;
+  font-size: 18px;
+  align-items: center;
 }
 
 .card-white a {
@@ -130,13 +132,39 @@ body {
   .index-container {
     width: 700px;
   }
-
+  .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px 10px;
+  margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 720px) {
+ .index-container {
+  width: 500px;
+ }
 
+ .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px 10px;
+  margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 540px) {
+  .index-container{
+    width: 350px;
+  }
 
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 6px 6px;
+    margin-bottom: 6px;
+  }
 }
