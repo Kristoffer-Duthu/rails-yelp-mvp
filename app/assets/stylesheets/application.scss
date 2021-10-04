@@ -132,6 +132,10 @@ body {
   .index-container {
     width: 700px;
   }
+
+  .card-show {
+  width: 700px;
+  }
   .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -146,6 +150,10 @@ body {
   width: 500px;
  }
 
+ .card-show {
+  width: 500px;
+  }
+
  .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -158,6 +166,10 @@ body {
 @media (max-width: 540px) {
   .index-container{
     width: 350px;
+  }
+
+  .card-show {
+  width: 350px;
   }
 
   .grid {
