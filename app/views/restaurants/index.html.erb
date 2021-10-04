@@ -1,9 +1,11 @@
 <h1> YELP! </h1>
 <div class="index-container">
   <h3> Add and Review Your Restaurants </h3>
-  <div class="btn-container">
+  <p class="text-center">Here you can review your favourite (or not so favourite) restaurants and share your thoughts on food and recommend dishes to your friends.</p>
+  <div class="btn-container text-center">
     <%= link_to "Add Restaurant", new_restaurant_path(@restaurant), class: 'btn btn-outline-primary' %>
   </div>
+  <hr>
   <% @restaurants.each do |restaurant| %>
   <h4 class="card-white " id="resto-link"> <%= link_to restaurant.name, restaurant_path(restaurant) %> <%= link_to "Delete", restaurant_path(restaurant), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-outline-dark' %> </h4>
   <% end %>
