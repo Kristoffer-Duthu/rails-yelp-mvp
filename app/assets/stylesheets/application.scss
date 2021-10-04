@@ -15,6 +15,14 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@1,500&display=swap');
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px 10px;
+  margin-bottom: 8px;
+}
+
 .card-white{
   display: flex;
   justify-content: space-between;
@@ -117,3 +125,18 @@ body {
 //   left: 90px;
 //   top: -40px;
 // }
+
+@media (max-width: 960px) {
+  .index-container {
+    width: 700px;
+  }
+
+}
+
+@media (max-width: 720px) {
+
+}
+
+@media (max-width: 540px) {
+
+}
